@@ -12,7 +12,7 @@ You can watch the tutorial and just replace the files with the ones from this re
      #+begin_src c
      extern uint16_t Timer1, Timer2;
      #+end_src
-   - **Under SystickHandler:**
+   - *Under SystickHandler:*
      #+begin_src c
      if (Timer1 > 0) Timer1--;
      if (Timer2 > 0) Timer2--;
@@ -23,7 +23,7 @@ You can watch the tutorial and just replace the files with the ones from this re
 6. Enable SPI global interrupt under SPI -> NVIC settings.
 7. Add the functions to the user_diskio.c file
     
-**Include the necessary headers:**
+*Include the necessary headers:*
     #+begin_src c
     #include "sd_functions.h"
     #include "ff_gen_drv.h"
