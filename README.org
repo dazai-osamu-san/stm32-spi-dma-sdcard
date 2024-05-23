@@ -2,13 +2,13 @@
 This project is a fork of a ControllersTech tutorial [[https://www.youtube.com/watch?time_continue=4&v=spVIZO-jbxE&source_ve_path=Mjg2NjY&feature=emb_logo][linked here]], modified to use DMA for SPI transmission and reception with an SD card.
 You can watch the tutorial and just replace the files with the ones from this repository and change the interrupt handler file accordingly.
 * Usage
-1. Place the provided files in `Core/Src` and `Core/Inc` directories.
+1. Place the provided files in =Core/Src= and =Core/Inc= directories.
 2. Modify your =stm32fxxxx_it.c= file as follows:
-   - **Under private includes:**
+   - *Under private includes:*
      #+begin_src c
      #include "ff_gen_drv.h"
      #+end_src
-   - **Under Private Variables:**
+   - *Under Private Variables:*
      #+begin_src c
      extern uint16_t Timer1, Timer2;
      #+end_src
@@ -22,7 +22,8 @@ You can watch the tutorial and just replace the files with the ones from this re
 5. In CubeMX/CubeIDE, enable Tx and Rx DMA for SPI under SPI -> DMA settings.
 6. Enable SPI global interrupt under SPI -> NVIC settings.
 7. Add the functions to the user_diskio.c file
-    **Include the necessary headers:**
+    
+**Include the necessary headers:**
     #+begin_src c
     #include "sd_functions.h"
     #include "ff_gen_drv.h"
